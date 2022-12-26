@@ -1,0 +1,11 @@
+docker run -d -p 8877:3306 -v /home/gilad/DevopsProjects/volumes:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password mysql:5.6 
+234d79672b868ad6a22e59bdd192e9d33f9b67025948f80f46e1d05f7c52e2fd
+cd /var/lib/mysql
+cp my.cnf /etc/mysql/my.cnf
+mysql -p < dump.sql
+mysql -p
+(password)
+use mydb
+insert into SuperHeroes(user_id, username, first_name, last_name, gender, password, status) values (19, 'aquaman' , 'arthur' , 'curry' , 'male' , 'e6a33eee180b07e563d74fee8c2c63d', 1);
+exit
+exit
